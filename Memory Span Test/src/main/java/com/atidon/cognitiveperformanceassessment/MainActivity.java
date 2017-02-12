@@ -177,6 +177,11 @@ boolean check = false;
                         bb.add(false);
                     }
                 }
+            if(s_in.length()< s_out.length()){
+                for(int i = s_in.length(); i < s_out.length(); i++){
+                    bb.add(false);
+                }
+            }
 
             checked++;
             btn_check.setEnabled(true);
