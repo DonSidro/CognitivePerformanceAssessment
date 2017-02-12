@@ -1,9 +1,8 @@
 package com.atidon.cognitiveperformanceassessment;
 
+import android.support.v4.app.FragmentManager;
 import android.os.Bundle;
 import android.os.Handler;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.text.InputFilter;
 import android.view.View;
 import android.support.design.widget.NavigationView;
@@ -24,33 +23,12 @@ import java.util.ArrayList;
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
-
-    TextView txt_characters;
-    EditText edit_text;
-    Button btn_check;
-    Characters characters;
-    ArrayList<String> c;
-    boolean started = false;
-    int checked = 0;
-    int num_Of_Length = 8;
-    Handler handler = new Handler();
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
-//        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-//        fab.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-//                        .setAction("Action", null).show();
-//            }
-//        });
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -61,19 +39,6 @@ public class MainActivity extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-        txt_characters = (TextView) findViewById(R.id.Text_Label);
-        edit_text = (EditText) findViewById(R.id.editText);
-        btn_check = (Button) findViewById(R.id.button);
-        btn_check.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                showChars(v);
-            }
-        });
-
-        characters = new Characters();
-        c = characters.Characters(num_Of_Length);
-        System.out.println(c);
     }
 
     @Override
@@ -113,16 +78,16 @@ public class MainActivity extends AppCompatActivity
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
         int id = item.getItemId();
+        android.app.FragmentManager fragmentManager = getFragmentManager();
+        if (id == R.id.nav_login) {
+            fragmentManager.beginTransaction()
+                    .replace(R.id.content_main, new LoginActivity())
+                    .commit();
 
-        if (id == R.id.nav_camera) {
-            finish();
-            startActivity(getIntent());
-            // Handle the camera action
-        } else if (id == R.id.nav_gallery) {
-
-        } else if (id == R.id.nav_slideshow) {
-
-        } else if (id == R.id.nav_manage) {
+        } else if (id == R.id.nav_memory_span_test) {
+            fragmentManager.beginTransaction()
+                    .replace(R.id.content_main, new MemorySpanTestActivity())
+                    .commit();
 
         } else if (id == R.id.nav_share) {
 
@@ -135,67 +100,5 @@ public class MainActivity extends AppCompatActivity
         return true;
     }
 
-boolean check = false;
-    public void showChars(View v){
-        btn_check.setEnabled(false);
-        edit_text.setEnabled(false);
-        ArrayList<Boolean> bb = new ArrayList<>();
-
-        if(checked <= num_Of_Length - 1 && !check) {
-                final String s = c.get(checked);
-                System.out.println(s);
-                System.out.println(checked);
-                for (int i = 0; i < s.length(); i++) {
-                    final int finalI = i;
-                    handler.postDelayed(new Runnable() {
-
-                        @Override
-                        public void run() {
-                            txt_characters.setText(String.valueOf(s.charAt(finalI)));
-                            if(finalI == s.length()-1){
-                                btn_check.setEnabled(true);
-                                btn_check.setText("Check!");
-                                check = true;
-                                edit_text.setEnabled(true);
-                                edit_text.setFilters(new InputFilter[] {new InputFilter.LengthFilter(s.length())});
-                                edit_text.setText("");
-                            }
-
-                        }
-
-                    }, 1000 * i);
-                }
-            }else if (check && edit_text.getText() != null && checked <= num_Of_Length - 1){
-                String s_out = c.get(checked);
-                String s_in = edit_text.getText().toString();
-                System.out.println(s_out);
-                System.out.println(s_in);
-                for(int i = 0; i < s_in.length(); i ++){
-                    if(String.valueOf(s_out.charAt(i)).equals(String.valueOf(s_in.charAt(i)))){
-                        bb.add(true);
-                    }else{
-                        bb.add(false);
-                    }
-                }
-            if(s_in.length()< s_out.length()){
-                for(int i = s_in.length(); i < s_out.length(); i++){
-                    bb.add(false);
-                }
-            }
-
-            checked++;
-            btn_check.setEnabled(true);
-            txt_characters.setText("");
-            check = false;
-            System.out.println(bb);
-            showChars(v);
-
-            }else{
-            Toast.makeText(getApplicationContext(),"The Test Is Done", Toast.LENGTH_LONG).show();
-
-        }
-
-
-    }
 
 }
