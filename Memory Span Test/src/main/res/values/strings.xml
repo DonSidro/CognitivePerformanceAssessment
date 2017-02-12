@@ -3,7 +3,7 @@
     <string name="sample_text">T</string>
     <string name="info_text">Type the characters you saw, in correct order, below</string>
     <string name="hint_text">Type here!</string>
-    <string name="check_btn_text">Check</string>
+    <string name="check_btn_text">Start!</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
 

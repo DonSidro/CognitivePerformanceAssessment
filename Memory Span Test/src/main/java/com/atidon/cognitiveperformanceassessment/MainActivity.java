@@ -1,6 +1,7 @@
 package com.atidon.cognitiveperformanceassessment;
 
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.view.View;
@@ -12,9 +13,27 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+
+
+    TextView txt_characters;
+    EditText edit_text;
+    Button btn_check;
+    Characters characters;
+    ArrayList<String> c;
+    boolean started = false;
+    int checked = 0;
+    int num_Of_Length = 8;
+    Handler handler = new Handler();
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +59,20 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        txt_characters = (TextView) findViewById(R.id.Text_Label);
+        edit_text = (EditText) findViewById(R.id.editText);
+        btn_check = (Button) findViewById(R.id.button);
+        btn_check.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showChars(v);
+            }
+        });
+
+        characters = new Characters();
+        c = characters.Characters(num_Of_Length);
+        System.out.println(c);
     }
 
     @Override
@@ -98,4 +131,56 @@ public class MainActivity extends AppCompatActivity
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
+
+boolean check = false;
+    public void showChars(View v){
+        btn_check.setEnabled(false);
+        edit_text.setEnabled(false);
+        ArrayList<Boolean> bb = new ArrayList<>();
+
+        if(checked <= num_Of_Length - 1 && !check) {
+                final String s = c.get(checked);
+                System.out.println(s);
+                System.out.println(checked);
+                for (int i = 0; i < s.length(); i++) {
+                    final int finalI = i;
+                    handler.postDelayed(new Runnable() {
+
+                        @Override
+                        public void run() {
+                            txt_characters.setText(String.valueOf(s.charAt(finalI)));
+                            if(finalI == s.length()-1){
+                                btn_check.setEnabled(true);
+                                btn_check.setText("Check!");
+                                check = true;
+                                edit_text.setEnabled(true);
+                            }
+
+                        }
+
+                    }, 1000 * i);
+                }
+            }else if (check && edit_text.getText() != null){
+                String s_out = c.get(checked);
+                String s_in = edit_text.getText().toString();
+                System.out.println(s_out);
+                System.out.println(s_in);
+                for(int i = 0; i < s_out.length(); i ++){
+                    if(String.valueOf(s_out.charAt(i)).equals(String.valueOf(s_in.charAt(i)))){
+                        bb.add(true);
+                    }else{
+                        bb.add(false);
+                    }
+                }
+            checked++;
+            btn_check.setEnabled(true);
+            btn_check.setText("Start!");
+            check = false;
+
+            }
+        System.out.println(bb);
+
+
+    }
+
 }
