@@ -115,6 +115,8 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_camera) {
+            finish();
+            startActivity(getIntent());
             // Handle the camera action
         } else if (id == R.id.nav_gallery) {
 
@@ -168,7 +170,7 @@ boolean check = false;
                 String s_in = edit_text.getText().toString();
                 System.out.println(s_out);
                 System.out.println(s_in);
-                for(int i = 0; i < s_out.length(); i ++){
+                for(int i = 0; i < s_in.length(); i ++){
                     if(String.valueOf(s_out.charAt(i)).equals(String.valueOf(s_in.charAt(i)))){
                         bb.add(true);
                     }else{
