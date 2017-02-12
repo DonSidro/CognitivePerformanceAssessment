@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.text.InputFilter;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -148,19 +149,23 @@ boolean check = false;
 
                         @Override
                         public void run() {
+                            txt_characters.setText("");
+
                             txt_characters.setText(String.valueOf(s.charAt(finalI)));
                             if(finalI == s.length()-1){
                                 btn_check.setEnabled(true);
                                 btn_check.setText("Check!");
                                 check = true;
                                 edit_text.setEnabled(true);
+                                edit_text.setFilters(new InputFilter[] {new InputFilter.LengthFilter(s.length())});
+                                edit_text.setText("");
                             }
 
                         }
 
                     }, 1000 * i);
                 }
-            }else if (check && edit_text.getText() != null){
+            }else if (check && edit_text.getText() != null && checked <= num_Of_Length - 1){
                 String s_out = c.get(checked);
                 String s_in = edit_text.getText().toString();
                 System.out.println(s_out);
@@ -172,13 +177,18 @@ boolean check = false;
                         bb.add(false);
                     }
                 }
+
             checked++;
             btn_check.setEnabled(true);
-            btn_check.setText("Start!");
+            txt_characters.setText("");
             check = false;
+            System.out.println(bb);
+            showChars(v);
 
-            }
-        System.out.println(bb);
+            }else{
+            Toast.makeText(getApplicationContext(),"The Test Is Done", Toast.LENGTH_LONG).show();
+
+        }
 
 
     }
