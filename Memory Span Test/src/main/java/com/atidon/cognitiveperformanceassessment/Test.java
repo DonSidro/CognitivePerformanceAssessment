@@ -5,6 +5,7 @@ package com.atidon.cognitiveperformanceassessment;
  */
 
 public class Test {
+    private int test_id;
     private int length;
     private boolean result;
 
@@ -14,6 +15,10 @@ public class Test {
     }
 
     //Getters
+    public int getTest_id(){
+        return this.test_id;
+    }
+
     public int getLength(){
         return this.length;
     }
