@@ -52,9 +52,9 @@ public class UserDataHandler {
 
         final String _temp = output.get(checked);
         String s_in = userIpput;
+        String temp = _temp.replace(" ", "");
 
-
-        if(_temp.contains(s_in)){
+        if(temp.contains(s_in)){
             test = new Test((_temp.length()/2), true);
         }else{
             test = new Test((_temp.length()/2), false);

@@ -58,27 +58,4 @@
         android:layout_below="@+id/Edit_Text_Input"
         android:layout_centerHorizontal="true" />
 
-    <Button
-        android:text="Button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="14dp"
-        android:id="@+id/button"
-        android:layout_alignLeft="@+id/Button_Submit"
-        android:layout_alignStart="@+id/Button_Submit" />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:text="Password"
-        android:ems="10"
-        android:layout_alignBottom="@+id/button"
-        android:layout_alignLeft="@+id/Text_View_Hint"
-        android:layout_alignStart="@+id/Text_View_Hint"
-        android:id="@+id/editText"
-        android:layout_alignRight="@+id/Button_Submit"
-        android:layout_alignEnd="@+id/Button_Submit" />
-
 </RelativeLayout>

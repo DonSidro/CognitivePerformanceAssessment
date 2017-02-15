@@ -30,9 +30,6 @@ public class MainMemoryActivity extends AppCompatActivity {
     EditText txt_Edit_Input;
     Button btn_Submit;
 
-    Button btn_Server;
-    EditText edit_Server;
-
     UserDataHandler userDataHandler;
 
     TestCreator newTest;
@@ -41,12 +38,9 @@ public class MainMemoryActivity extends AppCompatActivity {
 
     boolean stringCheck = false;
     int checked = 0;
-    int num_Of_Length = 2;
+    int num_Of_Length = 8;
 
     ArrayList<String> c;
-
-    boolean firstTry = true;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,7 +48,7 @@ public class MainMemoryActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main_memory);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
+        setTitle("Memory Test View");
         dataProvider = new DataProvider(this);
 
         userDataHandler = new UserDataHandler();
@@ -63,13 +57,9 @@ public class MainMemoryActivity extends AppCompatActivity {
 
         c = newTest.createRandomStringArray(num_Of_Length);
 
-
         txt_Label_Output = (TextView) findViewById(R.id.Text_Label_Output);
         txt_Edit_Input = (EditText) findViewById(R.id.Edit_Text_Input);
         txt_hint = (TextView) findViewById(R.id.Text_View_Hint);
-
-        btn_Server = (Button) findViewById(R.id.button);
-        edit_Server = (EditText) findViewById(R.id.editText);
 
 
         btn_Submit = (Button) findViewById(R.id.Button_Submit);
@@ -81,15 +71,6 @@ public class MainMemoryActivity extends AppCompatActivity {
             }
         });
 
-        btn_Server.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                dataProvider.dropTable(edit_Server.getText().toString(), v);
-            }
-        });
-
-
-        System.out.println(dataProvider.getProfilesCount());
     }
 
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -106,6 +87,11 @@ public class MainMemoryActivity extends AppCompatActivity {
                 Intent intent = new Intent(this, ResultActivity.class);
                 finish();
                 startActivity(intent);
+                return true;
+            case R.id.action_data:
+                Intent intent1 = new Intent(this, DatabaseActivity.class);
+                finish();
+                startActivity(intent1);
                 return true;
             default:
                 return super.onOptionsItemSelected(item);

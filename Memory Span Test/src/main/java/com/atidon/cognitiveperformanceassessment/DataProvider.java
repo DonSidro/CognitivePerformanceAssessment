@@ -39,24 +39,37 @@ public class DataProvider {
         return cursor;
     }
 
-    public void dropTable(String code, View v){
-        if(code.equals("doit")){
+    public void dropTable(View v){
+
             database.execSQL("DROP TABLE IF EXISTS " + dbHelper.TABLE_TEST);
             dbHelper.onCreate(database);
             Toast.makeText(v.getContext(),"All Data deleted", LENGTH_LONG).show();
-        }
+
     }
 
-    public String getProfilesCount() {
-        String countQuery = "SELECT " + dbHelper.LENGTH + " FROM " + dbHelper.TABLE_TEST;
+    public int getProfilesCount(int num) {
+        String countQuery = "SELECT * FROM " + dbHelper.TABLE_TEST;
         SQLiteDatabase db = dbHelper.getReadableDatabase();
         Cursor cursor = db.rawQuery(countQuery, null);
-//        for (Integer in: cursor.
-//             ) {
-//
-//        }
+        int n = 0;
+        cursor.moveToFirst();
+            while (!cursor.isAfterLast()) {
+                if(cursor.getInt(1) == num && cursor.getInt(2) == 1){
+                    n++;
+                }
+                cursor.moveToNext();
+            }
         cursor.close();
-        return countQuery;
+        return n;
+    }
+
+    public int getCount() {
+        String countQuery = "SELECT * FROM " + dbHelper.TABLE_TEST;
+        SQLiteDatabase db = dbHelper.getReadableDatabase();
+        Cursor cursor = db.rawQuery(countQuery, null);
+        int n = cursor.getCount();
+        cursor.close();
+        return n;
     }
 
 }
