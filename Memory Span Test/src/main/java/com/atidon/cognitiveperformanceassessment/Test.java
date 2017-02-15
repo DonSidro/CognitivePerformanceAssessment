@@ -5,6 +5,7 @@ package com.atidon.cognitiveperformanceassessment;
  */
 
 public class Test {
+
     private int test_id;
     private int length;
     private boolean result;

@@ -13,7 +13,7 @@ public class DbHelper extends SQLiteOpenHelper {
     //DB name
     private static final String DB_NAME = "memory_db";
     //DB version
-    private static final int DB_VERSION = 1;
+    private static final int DB_VERSION = 2;
     //Table name
     public static final String TABLE_TEST = "tbltest";
     //column names

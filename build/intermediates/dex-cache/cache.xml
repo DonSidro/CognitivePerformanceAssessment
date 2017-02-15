@@ -34,7 +34,7 @@
         jumboMode="true"
         optimize="true"
         revision="23.0.2"
-        sha1="816266a238ca4b04c22be27157c81d4631690ea1">
+        sha1="bbf3ce482f39ca171328a5d586a34de1684396ee">
         <dex dex="/Users/SidonKK/AndroidStudioProjects/Memory-Span-Test/Memory Span Test/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_8eae001d8a94f729729a3f59bcb61711701f0012/classes.dex" />
     </item>
     <item
@@ -54,6 +54,15 @@
         revision="23.0.2"
         sha1="0d191c1a09e4892d059e5ce749e4ad4e08129e35">
         <dex dex="/Users/SidonKK/AndroidStudioProjects/Memory-Span-Test/Memory Span Test/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-animated-vector-drawable-25.1.1_546c59525b3509038b9aed58c102bafaf65aa792/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/SidonKK/.gradle/caches/modules-2/files-2.1/com.github.PhilJay/MPAndroidChart/v3.0.1/369f9aa48a629b4e92557b37326f42dc3de796e4/MPAndroidChart-v3.0.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="369f9aa48a629b4e92557b37326f42dc3de796e4">
+        <dex dex="/Users/SidonKK/AndroidStudioProjects/Memory-Span-Test/Memory Span Test/build/intermediates/transforms/dex/debug/folders/1000/10/MPAndroidChart-v3.0.1_90eb5f3077a58c9f25e1024e563b44bcddebd462/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -79,7 +88,7 @@
         jumboMode="true"
         optimize="true"
         revision="23.0.2"
-        sha1="78b966b1abac71b1bde232ca06a3362e5b27e4a3">
+        sha1="7c28a98531e9f842e2e21089098d5ec6ead23339">
         <dex dex="/Users/SidonKK/AndroidStudioProjects/Memory-Span-Test/Memory Span Test/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_467344af4e5158094c94023aefc20a3d6c46f125/classes.dex" />
     </item>
     <item

@@ -1,6 +1,8 @@
 package com.atidon.cognitiveperformanceassessment;
 
 import android.os.Handler;
+import android.text.Spannable;
+import android.text.SpannableString;
 
 import java.util.ArrayList;
 
@@ -12,6 +14,8 @@ public class UserDataHandler {
 
 
     Handler handler;
+    DbHelper dbHelper;
+    DataProvider dataProvider;
 
 
     public String showShowText(ArrayList<String> output, int checked, final Listener<String, Boolean> onCompleteListener) {
@@ -35,9 +39,27 @@ public class UserDataHandler {
                     }
                 }
             };
-            handler.postDelayed(r, 1000 * i);
+            handler.postDelayed(r, 500 * i);
         }
 
         return "";
+    }
+
+
+    public Test testText(ArrayList<String> output, String userIpput, int checked){
+
+        Test test;
+
+        final String _temp = output.get(checked);
+        String s_in = userIpput;
+
+
+        if(_temp.contains(s_in)){
+            test = new Test((_temp.length()/2), true);
+        }else{
+            test = new Test((_temp.length()/2), false);
+        }
+
+        return test;
     }
 }

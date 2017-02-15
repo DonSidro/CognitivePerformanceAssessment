@@ -1,8 +1,8 @@
 <resources>
     <string name="app_name">Memory Span Test</string>
-    <string name="sample_text">T</string>
+    <string name="sample_text">!</string>
     <string name="info_text">Type the characters you saw, in correct order, below</string>
-    <string name="hint_text">Type here!</string>
+    <string name="hint_text">Type Here!</string>
     <string name="check_btn_text">Start!</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
@@ -24,4 +24,6 @@
     </string>
     <string name="title_activity_login_">Sign in</string>
     <string name="title_activity_main_memory">MainMemoryActivity</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_activity_result">ResultActivity</string>
 </resources>

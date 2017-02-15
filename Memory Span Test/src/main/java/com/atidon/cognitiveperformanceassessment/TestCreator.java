@@ -26,25 +26,21 @@ public class TestCreator {
         //Creating new Random object
         Random random = new Random();
 
+        int letterLength = 3;
         //For loop for creating random letter combination array.
         for (int i = 0; i < length_Of_Array; i++){
 
             //Temporary string
             String tempString = "";
 
-            //Random int value for the amount of letters used in a single string (from min to max -1)
-            int letterLength = random.nextInt(maxLetters - minLetters) + minLetters;
-
             //Inner for loop
             for(int j = 0; j < letterLength; j++){
                 String randomLetter = String.valueOf(alphabet.charAt(random.nextInt(alphabet.length())));
-                tempString = tempString + randomLetter;
+                tempString = tempString + randomLetter + " ";
             }
-            //Adding empty space at the end of string for UI
-            tempString = tempString + " ";
-
 
             tempArray.add(tempString);
+            letterLength++;
 
         }
         return tempArray;
