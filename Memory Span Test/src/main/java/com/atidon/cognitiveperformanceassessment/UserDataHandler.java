@@ -54,7 +54,7 @@ public class UserDataHandler {
         String s_in = userIpput;
         String temp = _temp.replace(" ", "");
 
-        if(temp.contains(s_in)){
+        if(temp.equals(s_in)){
             test = new Test((_temp.length()/2), true);
         }else{
             test = new Test((_temp.length()/2), false);

@@ -12,57 +12,12 @@
     </item>
     <item
         is-multidex="true"
-        jar="/Users/SidonKK/AndroidStudioProjects/Memory-Span-Test/Memory Span Test/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.2"
-        sha1="05ac60b707295b1b2c86f656fadc9e98728b64c6">
-        <dex dex="/Users/SidonKK/AndroidStudioProjects/Memory-Span-Test/Memory Span Test/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_467344af4e5158094c94023aefc20a3d6c46f125/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
         jar="/Users/SidonKK/AndroidStudioProjects/Memory-Span-Test/Memory Span Test/build/intermediates/exploded-aar/com.android.support/support-fragment/25.1.1/jars/classes.jar"
         jumboMode="true"
         optimize="true"
         revision="23.0.2"
         sha1="e2719c102dca3a7a5b02ce07f769362da6ddb4ab">
         <dex dex="/Users/SidonKK/AndroidStudioProjects/Memory-Span-Test/Memory Span Test/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-fragment-25.1.1_4089fc998f22afa5783a32c8b158fcda9f7cdbce/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/SidonKK/AndroidStudioProjects/Memory-Span-Test/Memory Span Test/build/intermediates/exploded-aar/com.android.support/support-v4/25.1.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.2"
-        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
-        <dex dex="/Users/SidonKK/AndroidStudioProjects/Memory-Span-Test/Memory Span Test/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-v4-25.1.1_b683f4e1ec2ee10e05f6dae043695094103bd135/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/SidonKK/AndroidStudioProjects/Memory-Span-Test/Memory Span Test/build/intermediates/exploded-aar/com.android.support/support-core-utils/25.1.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.2"
-        sha1="0fb891e8f0cfba0513043a7bb357513d229ca2cd">
-        <dex dex="/Users/SidonKK/AndroidStudioProjects/Memory-Span-Test/Memory Span Test/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-core-utils-25.1.1_4dd0f9d0325910888e664ec3dbf02877d9b8a95e/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/SidonKK/AndroidStudioProjects/Memory-Span-Test/Memory Span Test/build/intermediates/exploded-aar/com.android.support/support-media-compat/25.1.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.2"
-        sha1="7bde4c34162092e0a77e7f12dc85ed77c484cf5c">
-        <dex dex="/Users/SidonKK/AndroidStudioProjects/Memory-Span-Test/Memory Span Test/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-media-compat-25.1.1_7ce8c89c2570b155128bd50bd89fb609cf2cf794/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/SidonKK/AndroidStudioProjects/Memory-Span-Test/Memory Span Test/build/intermediates/exploded-aar/com.android.support/support-core-ui/25.1.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.2"
-        sha1="3e04ac8ca644ea7baddf6fdcf72e15c79e9df94a">
-        <dex dex="/Users/SidonKK/AndroidStudioProjects/Memory-Span-Test/Memory Span Test/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-core-ui-25.1.1_fb02f9aa5e90ae22fb1528a757c4d027c3085c03/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -79,7 +34,7 @@
         jumboMode="true"
         optimize="true"
         revision="23.0.2"
-        sha1="21c3ffbffface4463e86b4d70b0a0428696a7469">
+        sha1="7a36ef1ba224bbfb8daefd6a61264dc083e8deae">
         <dex dex="/Users/SidonKK/AndroidStudioProjects/Memory-Span-Test/Memory Span Test/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_8eae001d8a94f729729a3f59bcb61711701f0012/classes.dex" />
     </item>
     <item
@@ -120,6 +75,60 @@
     </item>
     <item
         is-multidex="true"
+        jar="/Users/SidonKK/AndroidStudioProjects/Memory-Span-Test/Memory Span Test/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="ecb496cc08dd52551fc5ec6db3bc0632e95a89bb">
+        <dex dex="/Users/SidonKK/AndroidStudioProjects/Memory-Span-Test/Memory Span Test/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-appcompat-v7-25.1.1_4d21cfb217dd3ed23e7fba567d213a6a63d07ad6/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/SidonKK/AndroidStudioProjects/Memory-Span-Test/Memory Span Test/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="0f9cd4fe1e3472660437d5bd61a195988a660f73">
+        <dex dex="/Users/SidonKK/AndroidStudioProjects/Memory-Span-Test/Memory Span Test/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_467344af4e5158094c94023aefc20a3d6c46f125/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/SidonKK/AndroidStudioProjects/Memory-Span-Test/Memory Span Test/build/intermediates/exploded-aar/com.android.support/support-v4/25.1.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="/Users/SidonKK/AndroidStudioProjects/Memory-Span-Test/Memory Span Test/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-v4-25.1.1_b683f4e1ec2ee10e05f6dae043695094103bd135/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/SidonKK/AndroidStudioProjects/Memory-Span-Test/Memory Span Test/build/intermediates/exploded-aar/com.android.support/support-core-utils/25.1.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="0fb891e8f0cfba0513043a7bb357513d229ca2cd">
+        <dex dex="/Users/SidonKK/AndroidStudioProjects/Memory-Span-Test/Memory Span Test/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-core-utils-25.1.1_4dd0f9d0325910888e664ec3dbf02877d9b8a95e/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/SidonKK/AndroidStudioProjects/Memory-Span-Test/Memory Span Test/build/intermediates/exploded-aar/com.android.support/support-media-compat/25.1.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="7bde4c34162092e0a77e7f12dc85ed77c484cf5c">
+        <dex dex="/Users/SidonKK/AndroidStudioProjects/Memory-Span-Test/Memory Span Test/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-media-compat-25.1.1_7ce8c89c2570b155128bd50bd89fb609cf2cf794/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/SidonKK/AndroidStudioProjects/Memory-Span-Test/Memory Span Test/build/intermediates/exploded-aar/com.android.support/support-core-ui/25.1.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="3e04ac8ca644ea7baddf6fdcf72e15c79e9df94a">
+        <dex dex="/Users/SidonKK/AndroidStudioProjects/Memory-Span-Test/Memory Span Test/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-core-ui-25.1.1_fb02f9aa5e90ae22fb1528a757c4d027c3085c03/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="/Users/SidonKK/AndroidStudioProjects/Memory-Span-Test/Memory Span Test/build/intermediates/exploded-aar/com.android.support/support-compat/25.1.1/jars/classes.jar"
         jumboMode="true"
         optimize="true"
@@ -135,15 +144,6 @@
         revision="23.0.2"
         sha1="b59b6ee8d6ecc03e672d253800430343493a6ed8">
         <dex dex="/Users/SidonKK/AndroidStudioProjects/Memory-Span-Test/Memory Span Test/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-25.1.1_e6a3820373982f36501b383b41cbac6d4a026845/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/SidonKK/AndroidStudioProjects/Memory-Span-Test/Memory Span Test/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.2"
-        sha1="ecb496cc08dd52551fc5ec6db3bc0632e95a89bb">
-        <dex dex="/Users/SidonKK/AndroidStudioProjects/Memory-Span-Test/Memory Span Test/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-appcompat-v7-25.1.1_4d21cfb217dd3ed23e7fba567d213a6a63d07ad6/classes.dex" />
     </item>
     <item
         is-multidex="true"

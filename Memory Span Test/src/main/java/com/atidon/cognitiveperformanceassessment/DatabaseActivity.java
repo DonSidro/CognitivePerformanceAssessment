@@ -65,8 +65,6 @@ public class DatabaseActivity extends AppCompatActivity {
                         int id = cursor.getInt(0);
                         int length = cursor.getInt(1);
                         int resu = cursor.getInt(2);
-                        System.out.println(id + " " + length + " " + resu);
-
                         values.add(new Items(id,length,resu));
                     } while (cursor.moveToNext());
                 }
